@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weather_bg"
+    android:paddingHorizontal="@dimen/_16sdp"
+    android:paddingTop="@dimen/_24sdp"
+    tools:context=".SearchActivity">
+
+    <ImageView
+        android:id="@+id/iconArrowBack"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:background="?selectableItemBackground"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <EditText
+        android:id="@+id/etSearchCity"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:background="@android:color/transparent"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:hint="Search"
+        android:inputType="text"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/iconMic"
+        app:layout_constraintStart_toEndOf="@+id/iconArrowBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconMic"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:background="?selectableItemBackground"
+        android:src="@drawable/ic_baseline_mic_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCity"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/iconArrowBack"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/example_city"
+        tools:itemCount="3"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
