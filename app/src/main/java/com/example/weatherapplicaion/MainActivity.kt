@@ -112,7 +112,7 @@ class MainActivity : AppCompatActivity() {
                 val address = jsonObj.getString("name") + ", " + sys.getString("country")
 
                 val str = main.getString("temp")
-                val temp = str.dropLast(3) + "°C"
+                val temp = str.dropLast(3) + "°"
 
                 binding.tvLocation.text = address
                 binding.tvUpdatedAt.text = updatedAtText
