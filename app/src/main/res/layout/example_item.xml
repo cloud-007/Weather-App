@@ -14,8 +14,8 @@
         android:id="@+id/tvTime"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textSize="15sp"
-        android:textColor="@color/white" />
+        android:textSize="12sp"
+        android:textColor="@color/grey_500" />
 
     <ImageView
         android:id="@+id/iv_Cloud"
@@ -40,10 +40,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0.1%"
-        android:textSize="15sp"
+        android:textSize="12sp"
         android:id="@+id/tvHumidity"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textColor="@color/white" />
+        android:textColor="@color/grey_500" />
 
 </LinearLayout>

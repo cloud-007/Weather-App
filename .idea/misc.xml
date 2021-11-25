@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/WeatherApplicaion/app/src/main/res/drawable-v21/ripple.xml" value="0.128125" />
         <entry key="..\:/WeatherApplicaion/app/src/main/res/drawable/gradiang_bg.xml" value="0.11481481481481481" />
+        <entry key="..\:/WeatherApplicaion/app/src/main/res/drawable/ic_baseline_dehaze_24.xml" value="0.11875" />
         <entry key="..\:/WeatherApplicaion/app/src/main/res/drawable/ripple.xml" value="0.128125" />
         <entry key="..\:/WeatherApplicaion/app/src/main/res/drawable/ripple_bg.xml" value="0.1824074074074074" />
         <entry key="..\:/WeatherApplicaion/app/src/main/res/drawable/weather_bg.xml" value="0.16111111111111112" />
@@ -12,7 +13,7 @@
         <entry key="..\:/WeatherApplicaion/app/src/main/res/layout/activity_search.xml" value="0.264" />
         <entry key="..\:/WeatherApplicaion/app/src/main/res/layout/error_layout.xml" value="0.1118659420289855" />
         <entry key="..\:/WeatherApplicaion/app/src/main/res/layout/example_city.xml" value="0.264" />
-        <entry key="..\:/WeatherApplicaion/app/src/main/res/layout/example_item.xml" value="0.536" />
+        <entry key="..\:/WeatherApplicaion/app/src/main/res/layout/example_item.xml" value="0.264" />
         <entry key="..\:/WeatherApplicaion/app/src/main/res/layout/gradiant_bg.xml" value="0.1" />
         <entry key="..\:/WeatherApplicaion/app/src/main/res/layout/item_layout.xml" value="0.264" />
         <entry key="..\:/WeatherApplicaion/app/src/main/res/layout/search_layout.xml" value="0.1" />

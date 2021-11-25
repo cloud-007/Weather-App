@@ -106,11 +106,13 @@ class MainActivity : AppCompatActivity() {
                     "Updated at: " + SimpleDateFormat("dd/MM/yyyy hh:mm a", Locale.ENGLISH).format(
                         Date(updatedAt * 1000)
                     )
-                val temp = main.getString("temp") + "°C"
                 val tempMin = main.getString("temp_min") + "°C"
                 val tempMax = main.getString("temp_max") + "°C"
                 val weatherDescription = weather.getString("description")
                 val address = jsonObj.getString("name") + ", " + sys.getString("country")
+
+                val str = main.getString("temp")
+                val temp = str.dropLast(3) + "°C"
 
                 binding.tvLocation.text = address
                 binding.tvUpdatedAt.text = updatedAtText
