@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
+import android.webkit.ConsoleMessage
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
@@ -16,7 +17,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.weatherapplicaion.Adapter.CityAdapter
 import com.example.weatherapplicaion.Adapter.RecyclerAdapter
 import com.example.weatherapplicaion.databinding.WeatherLayoutBinding
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import com.google.gson.internal.GsonBuildConfig
 import org.json.JSONObject
+import retrofit2.Retrofit
+import java.io.Console
 import java.net.URL
 import java.text.SimpleDateFormat
 import java.util.*
@@ -45,6 +51,7 @@ class MainActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+
         sharedPref = getSharedPreferences("myPref", MODE_PRIVATE)
         City = sharedPref.getString("City", "Sylhet").toString()
         binding = WeatherLayoutBinding.inflate(layoutInflater)
@@ -97,6 +104,8 @@ class MainActivity : AppCompatActivity() {
             super.onPostExecute(result)
             try {
                 val jsonObj = JSONObject(result)
+                println(jsonObj)
+
                 val main = jsonObj.getJSONObject("main")
                 val sys = jsonObj.getJSONObject("sys")
                 val wind = jsonObj.getJSONObject("wind")
@@ -111,6 +120,8 @@ class MainActivity : AppCompatActivity() {
                 val weatherDescription = weather.getString("description")
                 val address = jsonObj.getString("name") + ", " + sys.getString("country")
 
+                val feelsLike = "Feels like " + main.getString("feels_like").dropLast(3) + "°C"
+
                 val str = main.getString("temp")
                 val temp = str.dropLast(3) + "°"
 
@@ -119,6 +130,7 @@ class MainActivity : AppCompatActivity() {
                 binding.tvDescription.text = weatherDescription.capitalize()
                 binding.tvTemp.text = temp
                 binding.tvMaxMin.text = tempMax + "/" + tempMin
+                binding.tvFeelsLike.text = feelsLike
 
                 binding.progressBar.visibility = View.GONE
                 binding.tvErrorText.visibility = View.GONE
